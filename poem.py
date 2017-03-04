@@ -1,8 +1,7 @@
 # WFK 2014
 # Project: Poem generator
 # Basics of informatics
-
-import sys
+import rhymes
 
 
 def is_valid(prompt):
@@ -46,12 +45,15 @@ def main():
             # ABBA
         elif choice == 3:
             print('ABAB')
-            # ABAB
+            verses = int(input('Please input number of stanzas (verses) 1-9: '))
+            print('')
+            rhymes.abab(verses)
         elif choice == 4:
             print('Other')
-            #Other
+            # Other
         elif choice == 5:
             print('Bye!')
             loop = False
 
-if __name__ == "__main__": main()
+if __name__ == "__main__":
+    main()
