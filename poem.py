@@ -21,17 +21,21 @@ def is_valid(prompt):
 
 
 def menu():
-    print('\n\t--- POEM GENERATOR ---\n\n')
-    print('What type of rhymes shall the poem have?')
+    print('\nWhat type of rhymes shall the poem have?')
     print('1) AABB')
     print(' 2) ABBA')
     print('  3) ABAB')
     print('   4) Other')
     print('    5) Exit \n')
 
+# def save():
+# instead of printing lines in rhymes.py append them to list poem[] and then print
+# to save, just write in consecutive entities of the list poem[]
+
 
 def main():
     loop = True
+    print('\n\t--- POEM GENERATOR ---\n\n')
 
     while loop:
         menu()
@@ -39,7 +43,9 @@ def main():
 
         if choice == 1:
             print('AABB')
-            # AABB
+            verses = int(input('Please input number of stanzas (verses) 1-9: '))
+            print('')
+            rhymes.aabb(verses)
         elif choice == 2:
             print('ABBA')
             # ABBA
